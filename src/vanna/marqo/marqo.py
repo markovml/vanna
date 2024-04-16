@@ -44,7 +44,7 @@ class Marqo_VectorStore(VannaBase):
 
         self.mq.index("vanna-sql").add_documents(
             [question_sql_dict],
-            tensor_fields=["question", "sql"],
+            non_tensor_fields=["_id"],
         )
 
         return id
